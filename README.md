@@ -531,6 +531,7 @@ For example, if for a specific location at a specific day and hour, the predicte
 the suggested solution can provide 2 different outputs at once:
 
 1- What is the expected demand/supply in a specific location at a specific day/time?
+
 2- What are the areas which are expected to have a lack of demand at a specific day/time?
 
 ### Predict the demand/supply
@@ -587,7 +588,9 @@ Helpful features: the ride value, the value per kilometer, the average ride valu
 ### Additional Features
 
 1- monthly patterns: when having data for different months, we can get insights and patterns related to the seasons and the special events and holidays.
+
 2- weather information: usually, on rainy days, taxis are ordered more since the usage of public transportation is less convenient, so including the weather conditions might be helpful to make better predictions about the demand changes.
+
 3- travel information: a plane arriving at a late hour at night might cause a high and a very profitable demand, so incorporating information from the airports and the long distance trains would be helpful.
 
 ## Validation Experiment
@@ -595,10 +598,17 @@ Helpful features: the ride value, the value per kilometer, the average ride valu
 A/B testing can be used to validate the suggested solution for live operations since it's a method to compare 2 versions of a system (web page, app, etc.) to determine which one performs better. Details are as the following:
 
 1- Determine the goals and what to measure: the goals are to make sure higher profits are made, riders are better served, and riders are more satisfied. In this case we can measure the number of served riders, the average waiting time of the riders, the count of canceled rides due to long waiting time, and the average time where drivers are in the Idle status (moving without a customer).
+
 2- Split the drivers into 2 equal, well balances sets (randomly sampled taking days and different shifts into account and making sure every category is represented in both the control and the treatment groups).
+
 3- Set the hypothesis: the treatment group will have higher profits, less waiting and idle times, more served riders, and less cancelations. The null hypothesis is that the current version of the app (linked to the control group) is better.
+
 4- Perform the test: for the control group, keep the current version of the drivers app, while setting the updated version with the query functionality and the broadcasted recommendations to the treatment group. Then let the drivers do their job for the set period of the experience (1 week for example).
+
 5- Log all the previously mentioned information then calculate the performance metrics per each group.
+
 6- Calculate the p-value to determine if we can reject the null hypothesis.
+
 7- Compare between the performance of the 2 groups by providing the raw numbers and useful charts and plots.
+
 8- Make a decision with the Stakeholders.
