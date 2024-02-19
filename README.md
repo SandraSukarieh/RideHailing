@@ -290,7 +290,6 @@ cluster
 0    238750
 1    207522
 2    163920
-Name: count, dtype: int64
 ```
 The clusters seem somehow balanced (cluster 2 is the smallest but not small enough to be considered as an outlier cluster), and no small group of rides stands out and require further analysis.
 
@@ -304,8 +303,7 @@ When a trip is finished, the driver in most cases are online and free to take an
 
 Based on the following link,the speed in residential areas in Estonia (based on what the map shows us) is set to 50 km/h, so we estimate the average speed to be around 40km/h due to delays and traffic jam.
 
-https://www.rac.co.uk/drive/travel/country/estonia/#:~:text=Estonian speed limit,-There are no&text=In built-up areas%2C the,to 110%2Fkm%2Fh.
-
+https://www.rac.co.uk/drive/travel/country/estonia/#:~:text=Estonian%20speed%20limit,-There%20are%20no&text=In%20built%2Dup%20areas%2C%20the,to%20110%2Fkm%2Fh
 ```python 
 # speed = distance / time ==> time = distance / speed
 
